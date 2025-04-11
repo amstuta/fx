@@ -42,9 +42,10 @@ func Display(data []byte, fileName string) {
 	searchInput.Prompt = "/"
 
 	m := &model{
-		head:        head,
-		top:         head,
-		showCursor:  true,
+		head: head,
+		top:  head,
+		// showCursor:  true,
+		showCursor:  false,
 		wrap:        true,
 		fileName:    fileName,
 		digInput:    digInput,
@@ -54,16 +55,8 @@ func Display(data []byte, fileName string) {
 
 	lipgloss.SetColorProfile(theme.TermOutput.ColorProfile())
 
-	withMouse := tea.WithMouseCellMotion()
-	if _, ok := os.LookupEnv("FX_NO_MOUSE"); ok {
-		withMouse = tea.WithAltScreen()
-	}
+	p := tea.NewProgram(m)
 
-	p := tea.NewProgram(m,
-		tea.WithAltScreen(),
-		withMouse,
-		tea.WithOutput(os.Stderr),
-	)
 	_, err = p.Run()
 	if err != nil {
 		panic(err)
@@ -80,7 +73,6 @@ type model struct {
 	cursor                int // cursor position [0, termHeight)
 	showCursor            bool
 	wrap                  bool
-	margin                int
 	fileName              string
 	digInput              textinput.Model
 	searchInput           textinput.Model
@@ -617,11 +609,6 @@ func (m *model) View() string {
 		screen = append(screen, '\n')
 		printedLines++
 		n = n.Next
-	}
-
-	for i := printedLines; i < m.viewHeight(); i++ {
-		screen = append(screen, theme.Empty...)
-		screen = append(screen, '\n')
 	}
 
 	if m.digInput.Focused() {
