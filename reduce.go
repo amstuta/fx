@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path"
 
-	"github.com/antonmedv/fx/internal/engine"
+	"github.com/amstuta/fx/internal/engine"
 )
 
 //go:embed npm/index.js

@@ -24,7 +24,7 @@ apps:
 parts:
   fx:
     plugin: go
-    source: https://github.com/antonmedv/fx.git
+    source: https://github.com/amstuta/fx.git
     source-type: git
     stage-snaps:
       - node/18/stable

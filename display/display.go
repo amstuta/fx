@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	. "github.com/antonmedv/fx/internal/jsonx"
-	"github.com/antonmedv/fx/internal/theme"
-	jsonpath "github.com/antonmedv/fx/path"
+	. "github.com/amstuta/fx/internal/jsonx"
+	"github.com/amstuta/fx/internal/theme"
+	jsonpath "github.com/amstuta/fx/path"
 	"github.com/atotto/clipboard"
 	"github.com/charmbracelet/bubbles/key"
 	"github.com/charmbracelet/bubbles/textinput"

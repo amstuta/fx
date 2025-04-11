@@ -11,7 +11,7 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/muesli/termenv"
 
-	"github.com/antonmedv/fx/internal/utils"
+	"github.com/amstuta/fx/internal/utils"
 )
 
 type Theme struct {

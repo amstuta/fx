@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/antonmedv/fx/internal/utils"
+	"github.com/amstuta/fx/internal/utils"
 )
 
 type jsonParser struct {

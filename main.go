@@ -12,9 +12,9 @@ import (
 	"runtime/pprof"
 	"strings"
 
-	"github.com/antonmedv/fx/display"
-	"github.com/antonmedv/fx/internal/complete"
-	"github.com/antonmedv/fx/internal/theme"
+	"github.com/amstuta/fx/display"
+	"github.com/amstuta/fx/internal/complete"
+	"github.com/amstuta/fx/internal/theme"
 	"github.com/goccy/go-yaml"
 	"github.com/mattn/go-isatty"
 )

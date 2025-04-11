@@ -1,7 +1,7 @@
 package display
 
 import (
-	. "github.com/antonmedv/fx/internal/jsonx"
+	. "github.com/amstuta/fx/internal/jsonx"
 )
 
 type search struct {
