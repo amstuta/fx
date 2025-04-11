@@ -1,4 +1,4 @@
-package main
+package display
 
 import (
 	. "github.com/antonmedv/fx/internal/jsonx"

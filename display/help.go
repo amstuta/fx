@@ -1,4 +1,4 @@
-package main
+package display
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"github.com/charmbracelet/lipgloss"
 )
 
-func usage(keyMap KeyMap) string {
+func Usage(version string) string {
 	title := lipgloss.NewStyle().Bold(true)
 	pad := lipgloss.NewStyle().PaddingLeft(4)
 	return fmt.Sprintf(`
